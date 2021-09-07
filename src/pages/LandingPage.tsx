@@ -61,7 +61,8 @@ LandingPage.Wrapper = styled.div`
         justify-content: center;
 
         img {
-          width: 80%;
+          max-height: 40vh;
+          idth: 80%;
         }
       }
     }
