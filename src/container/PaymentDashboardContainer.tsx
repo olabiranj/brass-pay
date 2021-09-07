@@ -21,8 +21,10 @@ function PaymentDashboardContainer(
       <ul className="nav justify-content-center">
         <li className="nav-item">
           <Link
-            className={`nav-link active text-info ${
-              window.location.pathname === PAYMENT ? 'disabled' : ''
+            className={`nav-link active ${
+              window.location.pathname === PAYMENT
+                ? 'disabled text-primary'
+                : 'text-info'
             }`}
             to={PAYMENT}
           >
@@ -31,8 +33,10 @@ function PaymentDashboardContainer(
         </li>
         <li className="nav-item">
           <Link
-            className={`nav-link active text-info ${
-              window.location.pathname === TRANSACTION_HISTORY ? 'disabled' : ''
+            className={`nav-link active ${
+              window.location.pathname === TRANSACTION_HISTORY
+                ? 'disabled text-primary'
+                : 'text-info'
             }`}
             to={TRANSACTION_HISTORY}
           >
