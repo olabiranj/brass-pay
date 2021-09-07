@@ -41,7 +41,7 @@ function LandingPage() {
 }
 
 LandingPage.Wrapper = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   background-image: linear-gradient(to bottom right, #1affa3, #0066ff);
   display: flex;
@@ -62,7 +62,7 @@ LandingPage.Wrapper = styled.div`
 
         img {
           max-height: 40vh;
-          idth: 80%;
+          width: 80%;
         }
       }
     }
