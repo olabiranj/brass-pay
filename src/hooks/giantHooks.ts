@@ -21,6 +21,7 @@ export const usePayment = () => {
     accName: '',
     amount: 0,
     email: '',
+    reference: '',
     date: Date(),
   });
   const config: paystackTypes = {
@@ -35,13 +36,10 @@ export const usePayment = () => {
   );
 
   // if payment was successful
-  const onSuccess = () => {
-    setPaymentData({
-      ...paymentData,
-      accNo: '',
-      accName: '',
-      email: '',
-      date: Date(),
+  const onSuccess = (reference: any) => {
+    dispatch({
+      type: CREATE_PAYMENT,
+      payload: { ...paymentData, reference },
     });
   };
 
@@ -105,12 +103,15 @@ export const usePayment = () => {
   function sendFunds() {
     dispatch({ type: PAYMENT_LOADING });
     setTimeout(() => {
-      dispatch({
-        type: CREATE_PAYMENT,
-        payload: paymentData,
-      });
-
       initializePayment(onSuccess, onClose);
+      setPaymentData({
+        ...paymentData,
+        accNo: '',
+        accName: '',
+        email: '',
+        reference: '',
+        date: Date(),
+      });
     }, 3000);
   }
   useEffect(() => {

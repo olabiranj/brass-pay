@@ -22,6 +22,7 @@ function Transactionhistory() {
                         <th scope="col">Account Number</th>
                         <th scope="col">Amount</th>
                         <th scope="col">Date</th>
+                        <th scope="col">Reference</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -36,6 +37,7 @@ function Transactionhistory() {
                             <td>{data.accNo}</td>
                             <td>{toCurrency(data.amount)}</td>
                             <td>{data.date?.slice(0, 21)}</td>
+                            <td>{data.reference.reference}</td>
                           </tr>
                         )
                       )}

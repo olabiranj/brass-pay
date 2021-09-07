@@ -2,6 +2,7 @@ import React from 'react';
 import CurrencyInput from 'react-currency-input-field';
 import styled from 'styled-components';
 import Button from '../components/Button';
+import InputText from '../components/InputText';
 import PaymentDashboardContainer from '../container/PaymentDashboardContainer';
 import { usePayment } from '../hooks/giantHooks';
 function PaymentPage() {
@@ -57,12 +58,9 @@ function PaymentPage() {
                     >
                       Account Number
                     </label>
-                    <input
-                      type="tel"
-                      className="form-control"
-                      placeholder="Enter account number"
-                      required
-                      onChange={(e) => {
+
+                    <InputText
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                         if (
                           paymentData.bankCode &&
                           e.target.value.length === 10
@@ -79,11 +77,10 @@ function PaymentPage() {
                             accNo: e.target.value,
                           });
                         }
-                        // paymentData.bankCode &&
-                        //   e.target.value.length === 10 &&
-                        //   getUserDetails(e.target.value);
                       }}
-                      value={paymentData.accNo}
+                      type="tel"
+                      placeholder="Enter account number"
+                      required
                     />
                   </div>
                   <div className="col-sm-6 mb-4">
@@ -93,12 +90,11 @@ function PaymentPage() {
                     >
                       Account Name
                     </label>
-                    <input
-                      type="text"
-                      className="form-control"
+                    <InputText
                       required
                       readOnly
                       value={paymentData.accName}
+                      type="text"
                     />
                   </div>
                   <div className="col-sm-6 mb-4">
@@ -133,11 +129,12 @@ function PaymentPage() {
                     >
                       Sender's Email
                     </label>
-                    <input
+
+                    <InputText
                       type="text"
-                      className="form-control"
+                      styleClass="form-control"
                       required
-                      onChange={(e) =>
+                      onChange={(e: any) =>
                         setPaymentData({
                           ...paymentData,
                           email: e.target.value,
