@@ -116,13 +116,13 @@ function PaymentPage() {
                       className="form-control"
                       placeholder="Please enter an amount"
                       defaultValue={paymentData.amount}
-                      decimalsLimit={2}
-                      onValueChange={(value, name) =>
+                      onValueChange={(value, name) => {
+                        console.log(value);
                         setPaymentData({
                           ...paymentData,
                           amount: value,
-                        })
-                      }
+                        });
+                      }}
                     />
                   </div>
                   <div className="col-sm-6 mb-4">
@@ -139,7 +139,6 @@ function PaymentPage() {
                       onChange={(e) =>
                         setPaymentData({
                           ...paymentData,
-                          accName: '',
                           email: e.target.value,
                         })
                       }

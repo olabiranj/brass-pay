@@ -26,7 +26,7 @@ export const usePayment = () => {
   const config: paystackTypes = {
     reference: new Date().getTime().toString(),
     email: paymentData.email,
-    amount: paymentData.amount,
+    amount: paymentData.amount * 100,
     publicKey: process.env.REACT_APP_PAYSTACK_PUBLIC_KEY,
   };
   const initializePayment = usePaystackPayment(config);
