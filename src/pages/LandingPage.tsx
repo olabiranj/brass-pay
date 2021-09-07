@@ -72,6 +72,7 @@ LandingPage.Wrapper = styled.div`
         .col-sm-8 {
           h1 {
             font-size: 50px;
+            font-weight: 600;
             text-shadow: 2px 2px #000000;
           }
         }
