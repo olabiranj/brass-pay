@@ -10,7 +10,7 @@ function LandingPage() {
     <LandingPage.Wrapper>
       <div className="container">
         <div className="row">
-          <div className="col-sm-8">
+          <div className="col-md-8">
             <h1 className="text-light">Welcome To Brass Pay</h1>
             <p>...a seamless payment solution.</p>
             <div className="col-md-8 mt-4">
@@ -31,7 +31,7 @@ function LandingPage() {
               </div>
             </div>
           </div>
-          <div className="col-sm-4">
+          <div className="col-md-4">
             <img src={payImg} alt="payment pics" />
           </div>
         </div>
@@ -49,14 +49,14 @@ LandingPage.Wrapper = styled.div`
   align-items: center;
   .container {
     .row {
-      .col-sm-8 {
+      .col-md-8 {
         h1 {
           font-size: 70px;
           text-shadow: 2px 2px #4d4d4d;
           font-weight: 800;
         }
       }
-      .col-sm-4 {
+      .col-md-4 {
         display: flex;
         justify-content: center;
 
@@ -69,14 +69,14 @@ LandingPage.Wrapper = styled.div`
   @media (max-width: 520px) {
     .container {
       .row {
-        .col-sm-8 {
+        .col-md-8 {
           h1 {
             font-size: 50px;
             font-weight: 600;
             text-shadow: 2px 2px #000000;
           }
         }
-        .col-sm-4 {
+        .col-md-4 {
           img {
             width: 60%;
           }
