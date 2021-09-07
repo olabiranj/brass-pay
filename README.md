@@ -1,6 +1,6 @@
 # Brass Pay
 
-A payment gateway app for Brass
+A payment solution for Brass
 
 ## Docs
 

@@ -12,7 +12,7 @@ function LandingPage() {
         <div className="row">
           <div className="col-sm-8">
             <h1 className="text-light">Welcome To Brass Pay</h1>
-            <p>...a seamless payment gateway.</p>
+            <p>...a seamless payment solution.</p>
             <div className="col-md-8 mt-4">
               <div className="row">
                 <div className="col-sm-6 d-grid gap-2 mb-3">
