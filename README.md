@@ -11,4 +11,4 @@ Run the project using `npm start`
 
 ### `Live url`
 
-This project is live at
+This project is live at https://brass-pay.netlify.app
