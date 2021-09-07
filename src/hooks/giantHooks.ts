@@ -101,18 +101,26 @@ export const usePayment = () => {
 
   // send funds to beneficiary
   function sendFunds() {
-    dispatch({ type: PAYMENT_LOADING });
-    setTimeout(() => {
-      initializePayment(onSuccess, onClose);
-      setPaymentData({
-        ...paymentData,
-        accNo: '',
-        accName: '',
-        email: '',
-        reference: '',
-        date: Date(),
-      });
-    }, 3000);
+    if (paymentData.amount < 100 || paymentData.amount > 10000000) {
+      Swal.fire(
+        'Sorry',
+        'Funds must greater N100 but less than N10,000,000',
+        'error'
+      );
+    } else {
+      dispatch({ type: PAYMENT_LOADING });
+      setTimeout(() => {
+        initializePayment(onSuccess, onClose);
+        setPaymentData({
+          ...paymentData,
+          accNo: '',
+          accName: '',
+          email: '',
+          reference: '',
+          date: Date(),
+        });
+      }, 3000);
+    }
   }
   useEffect(() => {
     getBanks();

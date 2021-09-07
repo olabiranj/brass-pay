@@ -79,9 +79,6 @@ function PaymentPage() {
                             accNo: e.target.value,
                           });
                         }
-                        // paymentData.bankCode &&
-                        //   e.target.value.length === 10 &&
-                        //   getUserDetails(e.target.value);
                       }}
                       value={paymentData.accNo}
                     />
@@ -148,7 +145,7 @@ function PaymentPage() {
                   </div>
                   <div className="col-sm-12 mb-4 d-grid gap-2">
                     <Button
-                      name={loading ? 'Loading..' : 'Send'}
+                      name={loading ? 'Loading...' : 'Send'}
                       styleClass="btn-secondary"
                     />
                   </div>
