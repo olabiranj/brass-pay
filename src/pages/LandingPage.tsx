@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router';
 import styled from 'styled-components';
 import payImg from '../assets/img/payment.png';
-import { PAYMENT } from '../services/routes';
+import { PAYMENT, TRANSACTION_HISTORY } from '../services/routes';
 
 function LandingPage() {
   const history = useHistory();
@@ -24,7 +24,10 @@ function LandingPage() {
                   </button>
                 </div>
                 <div className="col-sm-6 d-grid gap-2 mb-3">
-                  <button className="btn btn-secondary ">
+                  <button
+                    className="btn btn-secondary"
+                    onClick={() => history.push(TRANSACTION_HISTORY)}
+                  >
                     Transaction History
                   </button>
                 </div>

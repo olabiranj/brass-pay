@@ -125,6 +125,27 @@ function PaymentPage() {
                       }
                     />
                   </div>
+                  <div className="col-sm-6 mb-4">
+                    <label
+                      htmlFor="exampleFormControlInput1"
+                      className="form-label"
+                    >
+                      Sender's Email
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      required
+                      onChange={(e) =>
+                        setPaymentData({
+                          ...paymentData,
+                          accName: '',
+                          email: e.target.value,
+                        })
+                      }
+                      value={paymentData.email}
+                    />
+                  </div>
                   <div className="col-sm-12 mb-4 d-grid gap-2">
                     <button className="btn btn-secondary">
                       {loading ? 'Loading..' : 'Send'}

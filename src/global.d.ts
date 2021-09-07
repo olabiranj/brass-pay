@@ -28,6 +28,7 @@ interface paymentDataTypes {
   accNo: string;
   accName: string;
   amount: any;
+  email: string;
   date?: string;
 }
 

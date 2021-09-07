@@ -20,11 +20,12 @@ export const usePayment = () => {
     accNo: '',
     accName: '',
     amount: 0,
+    email: '',
     date: Date(),
   });
   const config: paystackTypes = {
     reference: new Date().getTime().toString(),
-    email: 'olabiranj@gmail.com',
+    email: paymentData.email,
     amount: paymentData.amount,
     publicKey: process.env.REACT_APP_PAYSTACK_PUBLIC_KEY,
   };
@@ -36,10 +37,10 @@ export const usePayment = () => {
   // if payment was successful
   const onSuccess = () => {
     setPaymentData({
-      bankCode: '044',
+      ...paymentData,
       accNo: '',
       accName: '',
-      amount: 0,
+      email: '',
       date: Date(),
     });
   };
